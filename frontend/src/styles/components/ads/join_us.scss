@@ -1,0 +1,22 @@
+.join-us {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+
+  margin: 10px 1rem;
+  padding: 10px;
+  width: min-content;
+  height: min-content;
+  border: 1px solid var(--dark-gray);
+  border-radius: 20px;
+
+  h4 {
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+
+  small {
+    display: block;
+    color: var(--gray);
+  }
+}
