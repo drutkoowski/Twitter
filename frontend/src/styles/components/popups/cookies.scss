@@ -1,0 +1,28 @@
+.cookies {
+  display: flex;
+  justify-content: space-around;
+
+  background-color: var(--white);
+  color: var(--black);
+  padding: 1rem 0;
+
+  &__policy {
+    width: 40rem;
+
+    h3 {
+      color: var(--black);
+      font-weight: 500;
+    }
+
+    p {
+      font-size: 0.85rem;
+      color: var(--lighter-black)
+    }
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+  }
+}

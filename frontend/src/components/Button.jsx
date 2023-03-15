@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types'
 import '@/styles/components/button.scss'
 
-function Button ({ text, size }) {
+function Button ({ text, classNames }) {
   return (
-        <button>{text}</button>
+        <button className={classNames}>{text}</button>
   )
 }
 
 Button.propTypes = {
   text: PropTypes.string,
-  size: PropTypes.string
+  classNames: PropTypes.string
 }
 export default Button
