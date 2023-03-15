@@ -28,6 +28,9 @@
   font-weight: normal;
 }
 
+html {
+  overflow-y: auto;
+}
 
 body {
   background-color: var(--black);

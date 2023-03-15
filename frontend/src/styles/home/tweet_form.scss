@@ -1,0 +1,50 @@
+.tweet-form {
+  display: flex;
+  column-gap: 1rem;
+  padding: 10px 15px;
+  border-bottom: 1px solid var(--dark-gray);
+
+  img {
+    width: 48px;
+    height: 48px;
+    border-radius: 30px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    flex-grow: 1;
+
+    input {
+      background-color: var(--black);
+      font-size: 1.3rem;
+      color: var(--blanked-white);
+
+      &::placeholder {
+        color: var(--gray);
+      }
+
+      &:focus, &:active {
+        border: none;
+        outline: none;
+      }
+    }
+
+    &__actions {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 1rem;
+
+      &__icons {
+        display: flex;
+        column-gap: 1rem;
+
+        img {
+          height: 20px;
+          width: 20px;
+        }
+      }
+    }
+  }
+}

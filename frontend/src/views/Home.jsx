@@ -9,15 +9,17 @@ function Home () {
   console.log(isAuthenticated)
   return (
         <div className='wrapper'>
-            {isAuthenticated &&
+            {!isAuthenticated &&
                 <>
                     <TweetWrapper/>
                     <JoinUs/>
                 </>
             }
-            {!isAuthenticated && <>
-                <TweetWrapper/>
-            </>}
+            {isAuthenticated &&
+                <>
+                    <TweetWrapper/>
+                </>
+            }
         </div>
   )
 }

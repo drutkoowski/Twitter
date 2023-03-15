@@ -1,15 +1,16 @@
 .content {
   flex-grow: 1;
-  padding: 10px 15px;
   border-left: 1px solid var(--dark-gray);
   border-right: 1px solid var(--dark-gray);
   color: var(--extra-light-gray);
+  position: relative;
 
   // content for not authenticated user
   &__search {
     display: flex;
     column-gap: 1rem;
     align-items: center;
+    padding: 10px 15px;
 
     img {
       height: 1rem;
@@ -34,7 +35,10 @@
   &__navbar {
     display: flex;
     flex-direction: column;
-  
+    position: sticky;
+    padding: 10px 15px 0 15px;
+    border-bottom: 1px solid var(--dark-gray);
+
     h4 {
       font-size: 1.3rem;
       font-weight: 500;
@@ -42,9 +46,34 @@
 
     &__divider {
       display: flex;
+      margin-top: 1rem;
 
       &__item {
         flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        color: var(--gray);
+        height: 3rem;
+        cursor: pointer;
+        transition: all .3s ease-in;
+
+        &:hover {
+          background-color: var(--light-black);
+        }
+
+        &__wrapper {
+          display: flex;
+          align-items: center;
+        }
+
+        &__wrapper--active {
+          border-bottom: 3px solid var(--primary-blue);
+
+          p {
+            color: var(--white);
+            font-weight: 500;
+          }
+        }
       }
     }
   }
