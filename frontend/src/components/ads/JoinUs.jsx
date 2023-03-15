@@ -1,6 +1,6 @@
 function JoinUs () {
   return (
-        <div>Join us kurewko</div>
+        <div>Join us</div>
   )
 }
 
