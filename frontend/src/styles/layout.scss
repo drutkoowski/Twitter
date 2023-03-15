@@ -1,0 +1,11 @@
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 0.75fr 0.75fr 0.85fr;
+  flex-grow: 1;
+}

@@ -1,19 +1,19 @@
-import {useEffect} from 'react'
-import './App.css'
-import axios from "axios";
+import './styles/index.scss'
+import './styles/typography.css'
+import Sidebar from '@/components/sidebar/Sidebar.jsx'
+import TweetWrapper from '@/components/home/TweetWrapper.jsx'
+import JoinUs from '@/components/ads/JoinUs.jsx'
 
-function App() {
-  const fetchData = async () => {
-     const x = await axios.get('api/')
-     console.log(x);
-  };
-  useEffect(() => {
-    fetchData();
-  }, []);
+function App () {
   return (
-    <div>
-      Twitter
-    </div>
+        <div className={'flex-container'}>
+            <div className={'wrapper'}>
+                <Sidebar/>
+                <TweetWrapper/>
+                <JoinUs/>
+            </div>
+        </div>
+
   )
 }
 

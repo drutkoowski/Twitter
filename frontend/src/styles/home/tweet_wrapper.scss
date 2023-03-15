@@ -1,0 +1,9 @@
+.content {
+  flex-grow: 1;
+  padding: 10px 15px;
+  border-left: 1px solid var(--dark-gray);
+  border-right: 1px solid var(--dark-gray);
+
+  &__search {
+  }
+}

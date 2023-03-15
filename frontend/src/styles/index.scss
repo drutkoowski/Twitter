@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import 'utils';
+@import 'layout';
+
+:root {
+  --black: rgb(0, 0, 0);
+  --light-black: rgb(20, 23, 26);
+  --dark-gray: rgb(47, 51, 54);
+  --gray: #657786;
+  --light-gray: #AAB8C2;
+  --extra-light-gray: #E1E8ED;
+  --white: rgb(255, 255, 255);
+
+  --primary-blue: #1DA1F2;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+  font-weight: normal;
+}
+
+
+body {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+body::-webkit-scrollbar {
+  /* WebKit */
+  width: 0;
+  height: 0;
+}

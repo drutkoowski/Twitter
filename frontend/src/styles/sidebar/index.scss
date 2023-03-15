@@ -1,0 +1,13 @@
+.sidebar {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: flex-end;
+  padding-top: 15px;
+  width: 25rem;
+  row-gap: 2rem;
+
+  img {
+    width: 1.75rem;
+    height: 1.5rem;
+  }
+}
