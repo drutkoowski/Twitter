@@ -5,6 +5,7 @@
   border-right: 1px solid var(--dark-gray);
   color: var(--extra-light-gray);
 
+  // content for not authenticated user
   &__search {
     display: flex;
     column-gap: 1rem;
@@ -27,5 +28,24 @@
   &__more {
     margin-top: 1rem;
     color: var(--primary-blue)
+  }
+
+  // content for authenticated user
+  &__navbar {
+    display: flex;
+    flex-direction: column;
+  
+    h4 {
+      font-size: 1.3rem;
+      font-weight: 500;
+    }
+
+    &__divider {
+      display: flex;
+
+      &__item {
+        flex-grow: 1;
+      }
+    }
   }
 }

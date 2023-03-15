@@ -1,6 +1,6 @@
 .flex-container {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 0.75fr 1.6fr;
   min-height: 100vh;
   position: relative;
 
@@ -13,7 +13,7 @@
 }
 
 .wrapper {
+  grid-column: 2/3;
   display: grid;
-  grid-template-columns: 0.75fr 0.75fr 0.85fr;
-  flex-grow: 1;
+  grid-template-columns: 0.75fr 0.85fr;
 }
