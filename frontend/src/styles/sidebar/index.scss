@@ -1,15 +1,25 @@
 .sidebar {
-  display: flex;
-  flex-flow: column wrap;
-  align-content: flex-end;
-  padding-top: 15px;
-  row-gap: 2rem;
-
   grid-column: 1/2;
-  margin-right: 7rem;
+  position: relative;
 
   img {
     width: 1.75rem;
     height: 1.5rem;
   }
+
+  &__wrapper {
+    position: absolute;
+    top: 10px;
+    right: 15rem;
+
+    &__fixed {
+      position: fixed;
+      display: flex;
+      flex-flow: column wrap;
+      align-content: flex-end;
+      row-gap: 2rem;
+    }
+  }
+
 }
+
