@@ -4,10 +4,10 @@
   padding: 10px 15px;
   border-bottom: 1px solid var(--dark-gray);
 
-  img {
-    width: 48px;
-    height: 48px;
-    border-radius: 30px;
+  &__avatar {
+    width: 100%;
+    min-width: 3rem;
+    max-width: 3rem;
   }
 
   &__container {

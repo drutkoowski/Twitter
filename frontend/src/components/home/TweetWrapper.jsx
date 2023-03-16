@@ -6,6 +6,7 @@ import InputSearch from '@/components/InputSearch.jsx'
 import TagsList from '@/components/tags/TagsList.jsx'
 import HomeNavbar from '@/components/navbars/HomeNavbar.jsx'
 import TweetForm from './TweetForm.jsx'
+import TweetList from './TweetList.jsx'
 
 function TweetWrapper () {
   const { user, setUser, isAuthenticated, setIsAuthenticated } = useContext(UserContext)
@@ -29,6 +30,7 @@ function TweetWrapper () {
                 <div className='content'>
                     <HomeNavbar/>
                     <TweetForm/>
+                    <TweetList/>
                 </div>
             }
         </>

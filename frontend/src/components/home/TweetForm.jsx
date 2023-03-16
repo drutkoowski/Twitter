@@ -1,11 +1,12 @@
 import '@/styles/home/tweet_form.scss'
 import Button from '@/components/Button.jsx'
+import Avatar from '../Avatar.jsx'
 
 function TweetForm () {
   return (
         <div className='tweet-form'>
             <div className='tweet-form__avatar'>
-                <img src="/default_image.png" alt="Your Avatar"/>
+                <Avatar/>
             </div>
             <div className='tweet-form__container'>
                 <input type="text" placeholder="What's happening?"/>
