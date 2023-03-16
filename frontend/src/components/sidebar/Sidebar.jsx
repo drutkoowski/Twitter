@@ -4,6 +4,7 @@ import UserContext from '@/context/UserContext.jsx'
 import '@/styles/sidebar/index.scss'
 import SidebarLink from './SidebarLink.jsx'
 import SidebarProfileInfo from './SidebarProfileInfo.jsx'
+import Button from '../Button.jsx'
 
 function Sidebar () {
   const { user, setUser, isAuthenticated, setIsAuthenticated } = useContext(UserContext)
@@ -31,6 +32,7 @@ function Sidebar () {
                             <SidebarLink text='Bookmarks' imgPath='/bookmarks-gray.svg' altText='Bookmarks'/>
                             <SidebarLink text='Profile' imgPath='/profile-gray.svg' altText='Profile'/>
                             <SidebarLink text='More' imgPath='/options-gray.svg' altText='More'/>
+                            <Button text='Tweet' classNames='primary py-3'/>
                             <SidebarProfileInfo/>
                         </>
                     }

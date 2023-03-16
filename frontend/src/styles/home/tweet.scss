@@ -24,6 +24,7 @@
         width: 100%;
         aspect-ratio: auto;
         border: 3px solid var(--dark);
+        border-radius: 20px;
       }
     }
 
@@ -54,7 +55,7 @@
       &__counter {
         display: flex;
         align-items: center;
-        column-gap: 0.25rem;
+        column-gap: 0.45rem;
         color: var(--gray);
         cursor: pointer;
 

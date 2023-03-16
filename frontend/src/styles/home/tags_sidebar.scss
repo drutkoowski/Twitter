@@ -1,0 +1,30 @@
+.tags-sidebar {
+  position: relative;
+  margin-top: 10px;
+  margin-left: 2rem;
+
+  &__wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+
+    &__fixed {
+      position: fixed;
+      width: 25rem;
+
+      &__trends {
+        margin-top: 1rem;
+        background-color: var(--lighter-black);
+        border-radius: 20px;
+        padding: 10px 15px;
+
+        h5 {
+          font-size: 1.25rem;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}

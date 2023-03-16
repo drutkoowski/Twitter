@@ -1,6 +1,11 @@
 .tag {
   display: flex;
   color: var(--gray);
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--dark-gray);
+  }
 
   &__info {
     flex-grow: 1;
@@ -12,8 +17,7 @@
     }
 
     h4 {
-      margin: 0 0;
-      font-size: 1.2rem;
+      font-size: 1rem;
       color: var(--extra-light-gray)
     }
   }

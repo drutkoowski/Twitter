@@ -3,7 +3,6 @@
   border-left: 1px solid var(--dark-gray);
   border-right: 1px solid var(--dark-gray);
   color: var(--extra-light-gray);
-  position: relative;
   // content for not authenticated user
   &__search {
     display: flex;
@@ -34,9 +33,13 @@
   &__navbar {
     display: flex;
     flex-direction: column;
-    position: sticky;
     padding: 10px 15px 0 15px;
     border-bottom: 1px solid var(--dark-gray);
+    position: sticky;
+    position: -webkit-sticky;
+    background-color: var(--black);
+    top: 0;
+    z-index: 2000;
 
     h4 {
       font-size: 1.3rem;
@@ -73,6 +76,7 @@
             font-weight: 500;
           }
         }
+
       }
     }
   }
