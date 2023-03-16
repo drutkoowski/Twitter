@@ -3,6 +3,7 @@ import UserContext from '@/context/UserContext.jsx'
 
 import '@/styles/sidebar/index.scss'
 import SidebarLink from './SidebarLink.jsx'
+import SidebarProfileInfo from './SidebarProfileInfo.jsx'
 
 function Sidebar () {
   const { user, setUser, isAuthenticated, setIsAuthenticated } = useContext(UserContext)
@@ -12,7 +13,7 @@ function Sidebar () {
         <div className='sidebar'>
             <div className='sidebar__wrapper'>
                 <div className='sidebar__wrapper__fixed'>
-                    <div className='sidebar__element'>
+                    <div className='sidebar__element pl-2'>
                         <img src="/twitter-gray.svg" alt="Twitter logo"/>
                     </div>
                     {!isAuthenticated &&
@@ -30,8 +31,10 @@ function Sidebar () {
                             <SidebarLink text='Bookmarks' imgPath='/bookmarks-gray.svg' altText='Bookmarks'/>
                             <SidebarLink text='Profile' imgPath='/profile-gray.svg' altText='Profile'/>
                             <SidebarLink text='More' imgPath='/options-gray.svg' altText='More'/>
+                            <SidebarProfileInfo/>
                         </>
-                    }</div>
+                    }
+                </div>
             </div>
         </div>
 

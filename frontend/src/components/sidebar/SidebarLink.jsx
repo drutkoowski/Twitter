@@ -3,10 +3,14 @@ import '@/styles/sidebar/sidebar_link.scss'
 
 function SidebarLink ({ text, imgPath, altText }) {
   return (
+
         <div className='sidebar__element'>
-            <img src={imgPath} alt={altText}/>
-            <p>{text}</p>
+            <div className='sidebar__element__wrapper'>
+                <img src={imgPath} alt={altText}/>
+                <p>{text}</p>
+            </div>
         </div>
+
   )
 }
 

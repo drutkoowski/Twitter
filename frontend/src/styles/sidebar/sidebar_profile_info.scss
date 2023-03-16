@@ -1,0 +1,42 @@
+.sidebar__element--profile {
+  display: flex;
+  margin-top: auto;
+  margin-bottom: 2rem;
+  column-gap: 0.5rem;
+  height: 50px;
+  width: 14rem;
+  padding: 5px;
+  border-radius: 20px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--dark-gray);
+  }
+
+  &__username {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+
+    h4 {
+      font-weight: 700;
+    }
+
+    small {
+      color: var(--gray);
+    }
+  }
+
+  svg {
+    height: 18.75px;
+    width: 18.75px;
+    align-self: center;
+    margin-left: auto;
+  }
+
+  img.avatar {
+    height: 40px;
+    width: 40px;
+  }
+
+}

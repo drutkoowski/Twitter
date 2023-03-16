@@ -9,21 +9,30 @@ import Cookies from '@/components/popups/Cookies.jsx'
 import JoinTwitter from '@/components/popups/JoinTwitter.jsx'
 import { UserProvider } from '@/context/UserContext.jsx'
 
+import { MainProvider } from '@/context/MainContext.jsx'
 import './styles/index.scss'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <BrowserRouter>
         <AxiosInterceptor>
-            <UserProvider>
-                <div className='flex-container'>
-                    <Sidebar/>
-                    <App/>
-                    <div className='policy'>
-                        <JoinTwitter/>
-                        <Cookies/>
+
+            <MainProvider>
+                <UserProvider>
+
+                    <div className='flex-container'>
+                        <Sidebar/>
+                        <App/>
+
+                        <div className='policy'>
+                            <JoinTwitter/>
+                            <Cookies/>
+                        </div>
+
                     </div>
-                </div>
-            </UserProvider>
+
+                </UserProvider>
+            </MainProvider>
+
         </AxiosInterceptor>
     </BrowserRouter>
 )
