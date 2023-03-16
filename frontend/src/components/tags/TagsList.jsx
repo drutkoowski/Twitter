@@ -6,7 +6,6 @@ function TagsList () {
         <div className='tags-container'>
             <Tag tag='Source 2' countryName='Poland' tweetsCount='45.2k'/>
             <Tag tag='Marta' countryName='Poland' tweetsCount='29.2k'/>
-
         </div>
   )
 }

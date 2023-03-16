@@ -1,4 +1,4 @@
-import '@/styles/home/tweet_list.scss'
+import '@/styles/views/home/tweet_list.scss'
 import Tweet from './Tweet.jsx'
 
 function TweetList () {

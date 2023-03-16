@@ -1,0 +1,19 @@
+.follow-suggestion {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+  margin-top: 0.5rem;
+
+  &__username {
+    h4 {
+      font-weight: 700;
+      color: var(--extra-light-gray)
+    }
+
+    color: var(--gray);
+  }
+
+  button {
+    margin-left: auto;
+  }
+}

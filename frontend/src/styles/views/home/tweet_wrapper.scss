@@ -4,6 +4,19 @@
   border-right: 1px solid var(--dark-gray);
   color: var(--extra-light-gray);
   // content for not authenticated user
+
+  &__title {
+    margin-left: 15px;
+  }
+
+  div.tag {
+    padding: 0 15px;
+  }
+
+  &__more {
+    padding: 0 15px;
+  }
+
   &__search {
     display: flex;
     column-gap: 1rem;

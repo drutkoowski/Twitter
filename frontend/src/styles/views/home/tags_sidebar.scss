@@ -25,6 +25,18 @@
           font-weight: 700;
         }
       }
+
+      &__follow-suggestions {
+        margin-top: 1rem;
+        padding: 10px 15px;
+        border-radius: 20px;
+        background-color: var(--lighter-black);
+
+        h5 {
+          font-weight: 700;
+          font-size: 1.25rem;
+        }
+      }
     }
   }
 }

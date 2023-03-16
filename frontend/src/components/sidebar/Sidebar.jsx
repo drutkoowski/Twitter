@@ -19,15 +19,18 @@ function Sidebar () {
                     </div>
                     {!isAuthenticated &&
                         <>
-                            <SidebarLink text='Explore' imgPath='/hash-gray.svg' altText='Explore'/>
+                            <SidebarLink text='Explore' imgPath='/hash-gray.svg' altText='Explore'
+                                         redirectPath='/explore'/>
                             <SidebarLink text='Settings' imgPath='/cog-gray.svg' altText='Settings'/>
                         </>
                     }
                     {isAuthenticated &&
                         <>
-                            <SidebarLink text='Home' imgPath='/home.svg' altText='Home'/>
-                            <SidebarLink text='Explore' imgPath='/hash-gray.svg' altText='Explore'/>
-                            <SidebarLink text='Notifications' imgPath='/notification-gray.svg' altText='Notifications'/>
+                            <SidebarLink text='Home' imgPath='/home.svg' altText='Home' redirectPath='/home'/>
+                            <SidebarLink text='Explore' imgPath='/hash-gray.svg' altText='Explore'
+                                         redirectPath='/explore'/>
+                            <SidebarLink text='Notifications' imgPath='/notification-gray.svg' altText='Notifications'
+                                         redirectPath='/notifications'/>
                             <SidebarLink text='Messages' imgPath='/message-gray.svg' altText='Messages'/>
                             <SidebarLink text='Bookmarks' imgPath='/bookmarks-gray.svg' altText='Bookmarks'/>
                             <SidebarLink text='Profile' imgPath='/profile-gray.svg' altText='Profile'/>

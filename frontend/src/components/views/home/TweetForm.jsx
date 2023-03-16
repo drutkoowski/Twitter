@@ -1,6 +1,6 @@
-import '@/styles/home/tweet_form.scss'
+import '@/styles/views/home/tweet_form.scss'
 import Button from '@/components/Button.jsx'
-import Avatar from '../Avatar.jsx'
+import Avatar from '@/components//Avatar.jsx'
 
 function TweetForm () {
   return (

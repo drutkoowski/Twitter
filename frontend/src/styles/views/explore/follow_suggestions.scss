@@ -1,0 +1,33 @@
+.follow-suggestions {
+  margin-top: 1rem;
+  height: max-content;
+  border-radius: 20px;
+  background-color: var(--lighter-black);
+  cursor: pointer;
+
+  h5 {
+    padding: 10px 15px;
+    font-weight: 700;
+    font-size: 1.25rem;
+  }
+
+  p {
+    padding: 10px 15px;
+    color: var(--primary-blue);
+    cursor: pointer;
+
+    &:hover {
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      background-color: var(--dark-gray);
+    }
+  }
+
+  div.follow-suggestion {
+    padding: 10px 15px;
+
+    &:hover {
+      background-color: var(--dark-gray);
+    }
+  }
+}

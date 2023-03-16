@@ -1,5 +1,5 @@
-import '@/styles/home/tweet.scss'
-import Avatar from '../Avatar.jsx'
+import '@/styles/views/home/tweet.scss'
+import Avatar from '@/components/Avatar.jsx'
 
 function Tweet () {
   return (
