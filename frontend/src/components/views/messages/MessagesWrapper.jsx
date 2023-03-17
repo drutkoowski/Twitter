@@ -4,7 +4,7 @@ import SelectMessage from './SelectMessage.jsx'
 
 function MessagesWrapper () {
   return (
-        <div className='wrapper'>
+        <div className='message-wrapper'>
             <div className='messages'>
                 <div className='messages__navbar'>
                     <h4>Messages</h4>
