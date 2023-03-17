@@ -1,6 +1,11 @@
+import '@/styles/views/notifications/notification.scss'
+
 function Notification () {
   return (
-        <div>123</div>
+        <div className='notification'>
+            <h4>eee</h4>
+            <p>Content</p>
+        </div>
   )
 }
 

@@ -1,0 +1,88 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+
+  .messages {
+    border-left: 1px solid var(--dark-gray);
+    border-right: 1px solid var(--dark-gray);
+
+    &__navbar {
+      display: flex;
+      align-items: center;
+      padding: 5px 10px;
+
+      h4 {
+        font-size: 1.75rem;
+        font-weight: 500;
+      }
+
+      &__icon {
+        width: 34px;
+        height: 34px;
+        display: flex;
+        align-items: center;
+
+        &:first-of-type {
+          margin-left: auto;
+        }
+
+        svg {
+          width: 18.75px;
+          height: 18.75px;
+          fill: var(--extra-light-gray);
+        }
+      }
+    }
+
+    &__welcome {
+      margin-top: 2rem;
+      padding: 5px 25px;
+
+      h4 {
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+
+      p {
+        color: var(--gray);
+      }
+
+      button {
+        margin-top: 1rem;
+        padding: 5px;
+        width: 10rem;
+        height: 3rem;
+      }
+    }
+  }
+
+  .conversation {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__welcome {
+      display: flex;
+      flex-direction: column;
+      width: 25rem;
+
+      h4 {
+        font-size: 1.75rem;
+        font-weight: 700;
+      }
+
+      p {
+        margin-top: 0.5rem;
+        color: var(--gray);
+      }
+
+      button {
+        margin-top: 1rem;
+        width: 15rem;
+        height: 3rem;
+      }
+    }
+
+  }
+}

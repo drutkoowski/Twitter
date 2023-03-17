@@ -31,7 +31,8 @@ function Sidebar () {
                                          redirectPath='/explore'/>
                             <SidebarLink text='Notifications' imgPath='/notification-gray.svg' altText='Notifications'
                                          redirectPath='/notifications'/>
-                            <SidebarLink text='Messages' imgPath='/message-gray.svg' altText='Messages'/>
+                            <SidebarLink text='Messages' imgPath='/message-gray.svg' altText='Messages'
+                                         redirectPath='/messages'/>
                             <SidebarLink text='Bookmarks' imgPath='/bookmarks-gray.svg' altText='Bookmarks'/>
                             <SidebarLink text='Profile' imgPath='/profile-gray.svg' altText='Profile'/>
                             <SidebarLink text='More' imgPath='/options-gray.svg' altText='More'/>
