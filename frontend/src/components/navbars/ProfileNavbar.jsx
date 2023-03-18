@@ -1,7 +1,17 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import Button from '../Button.jsx'
 
 function ProfileNavbar () {
   const [onlyFollowing, setOnlyFollowing] = useState(false)
+  const listenToScroll = () => {
+    const followBtnPosition = document.querySelector('.content__profile-header__upper__button').getBoundingClientRect().top
+    followBtnPosition <= 0 ? document.querySelector('.content__profile-navbar__button').classList.remove('not-visible') : document.querySelector('.content__profile-navbar__button').classList.add('not-visible')
+  }
+  useEffect(() => {
+    window.addEventListener('scroll', listenToScroll)
+    return () =>
+      window.removeEventListener('scroll', listenToScroll)
+  }, [])
   return (
         <div className='content__profile-navbar'>
             <div className='content__profile-navbar__svg-wrapper'>
@@ -13,6 +23,7 @@ function ProfileNavbar () {
                 <h4>rutek</h4>
                 <p>7 tweets</p>
             </div>
+            <Button text='Follow' classNames='white md ml-auto content__profile-navbar__button not-visible'/>
         </div>
 
   )

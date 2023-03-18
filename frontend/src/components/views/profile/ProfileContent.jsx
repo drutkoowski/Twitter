@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import TweetList from '../home/TweetList.jsx'
 
 function ProfileContent () {
   const [seeTweets, setSeeTweets] = useState(true)
@@ -35,6 +36,9 @@ function ProfileContent () {
                     onClick={() => changeStatus(setSeeLikes)}>
                     <p>Likes</p>
                 </div>
+            </div>
+            <div className='content__profile-container__tweets'>
+                <TweetList/>
             </div>
         </div>
   )
