@@ -59,6 +59,10 @@
       font-weight: 500;
     }
 
+    &--row {
+      flex-direction: row !important;
+    }
+
     &__divider {
       display: flex;
       margin-top: 1rem;

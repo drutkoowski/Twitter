@@ -6,7 +6,7 @@
     width: 1.75rem;
     height: 1.5rem;
   }
-  
+
   &__wrapper {
     position: absolute;
     top: 10px;
@@ -20,6 +20,10 @@
       align-content: flex-end;
       row-gap: 2rem;
       height: 100%;
+
+      button {
+        font-weight: 700;
+      }
     }
   }
 

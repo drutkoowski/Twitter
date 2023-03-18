@@ -35,7 +35,8 @@ function Sidebar () {
                                          redirectPath='/messages'/>
                             <SidebarLink text='Bookmarks' imgPath='/bookmarks-gray.svg' altText='Bookmarks'
                                          redirectPath='/bookmarks'/>
-                            <SidebarLink text='Profile' imgPath='/profile-gray.svg' altText='Profile'/>
+                            <SidebarLink text='Profile' imgPath='/profile-gray.svg' altText='Profile'
+                                         redirectPath='/okuratny_rutek'/>
                             <SidebarLink text='More' imgPath='/options-gray.svg' altText='More'/>
                             <Button text='Tweet' classNames='primary py-3'/>
                             <SidebarProfileInfo/>

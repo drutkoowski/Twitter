@@ -8,6 +8,7 @@ import Explore from './views/Explore.jsx'
 import Notifications from './views/Notifications.jsx'
 import Messages from './views/Messages.jsx'
 import Bookmarks from './views/Bookmarks.jsx'
+import Profile from './views/Profile.jsx'
 
 function App () {
   return (
@@ -17,6 +18,7 @@ function App () {
             <Route element={<Notifications/>} path={'/notifications'}/>
             <Route element={<Messages/>} path={'/messages'}/>
             <Route element={<Bookmarks/>} path={'/bookmarks'}/>
+            <Route element={<Profile/>} path={'/:username'}/>
             <Route element={<Navigate to='/home'/>} path='*'/>
         </Routes>
   )
