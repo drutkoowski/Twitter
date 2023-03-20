@@ -1,9 +1,10 @@
+import PropTypes from 'prop-types'
 import Avatar from '../Avatar.jsx'
 import '@/styles/sidebar/sidebar_profile_info.scss'
 
-function SidebarProfileInfo () {
+function SidebarProfileInfo ({ showProfilePopup }) {
   return (
-        <div className='sidebar__element--profile'>
+        <div className='sidebar__element--profile' onClick={showProfilePopup}>
             <Avatar/>
             <div className='sidebar__element--profile__username'>
                 <h4>rutek</h4>
@@ -15,6 +16,10 @@ function SidebarProfileInfo () {
             </svg>
         </div>
   )
+}
+
+SidebarProfileInfo.propTypes = {
+  showProfilePopup: PropTypes.func
 }
 
 export default SidebarProfileInfo

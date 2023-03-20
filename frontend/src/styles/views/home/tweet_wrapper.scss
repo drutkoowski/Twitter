@@ -3,6 +3,8 @@
   border-left: 1px solid var(--dark-gray);
   border-right: 1px solid var(--dark-gray);
   color: var(--extra-light-gray);
+  position: relative;
+  z-index: 1;
   // content for not authenticated user
 
   &__title {
