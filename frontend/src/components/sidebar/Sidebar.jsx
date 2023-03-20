@@ -41,14 +41,21 @@ function Sidebar () {
                                          redirectPath='/okuratny_rutek'/>
                             <SidebarLink text='More' imgPath='/options-gray.svg' altText='More'/>
                             <Button text='Tweet' classNames='primary py-3'/>
-                            {showProfilePopup && <div className='popup__container'>
-                                <Popup>eee</Popup>
-                            </div>}
                             <SidebarProfileInfo showProfilePopup={() => setShowProfilePopup(!showProfilePopup)}/>
                         </>
                     }
                 </div>
             </div>
+            {showProfilePopup &&
+                <Popup relativeElementClass='sidebar__element--profile'>
+                    <div className='popup__content__element'>
+                        <h4>Add existing account</h4>
+                    </div>
+                    <div className='popup__content__element'>
+                        <h4>Log out from @okuratny rutek</h4>
+                    </div>
+                </Popup>
+            }
         </div>
 
   )

@@ -1,8 +1,26 @@
 .popup {
   position: fixed;
   background-color: var(--black);
-  padding: 10px 15px;
+  padding: 10px 0;
   border: 1px solid var(--gray);
   border-radius: 10px;
   z-index: 20000 !important;
+  box-shadow: rgb(255 255 255 / 20%) 0px 0px 15px, rgb(255 255 255 / 15%) 0px 0px 3px 1px;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.25rem;
+    width: 25rem;
+
+    &__element {
+      padding: 5px 15px;
+      cursor: pointer;
+      flex-shrink: 1;
+
+      &:hover {
+        background-color: var(--gray);
+      }
+    }
+  }
 }
