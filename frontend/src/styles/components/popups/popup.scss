@@ -1,5 +1,4 @@
 .popup {
-  position: fixed;
   background-color: var(--black);
   padding: 10px 0;
   border: 1px solid var(--gray);
@@ -13,8 +12,19 @@
     row-gap: 0.25rem;
     width: 25rem;
 
+    &::after {
+      content: "";
+      position: absolute;
+      top: 112%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: var(--gray) transparent transparent transparent;
+    }
+
     &__element {
-      padding: 5px 15px;
+      padding: 10px 15px;
       cursor: pointer;
       flex-shrink: 1;
 

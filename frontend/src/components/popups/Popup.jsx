@@ -2,35 +2,59 @@ import '@/styles/components/popups/popup.scss'
 import { useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 
-function Popup ({ children, relativeElementClass }) {
+function Popup ({ children, relativeElement, directionX, directionY, position, onClose }) {
   const popup = useRef(null)
+
+  function handleClickOutside (event) {
+    if (relativeElement.current && !relativeElement.current.contains(event.target)) {
+      onClose()
+    }
+  }
+
   const popupPosition = () => {
-    const relativeElement = document.querySelector(`.${relativeElementClass}`)
-    const positionLeft = relativeElement.getBoundingClientRect().left
-    const positionTop = relativeElement.getBoundingClientRect().top - 100
-    popup.current.style.top = `${positionTop}px`
-    popup.current.style.left = `${positionLeft}px`
+    let positionY, positionX
+    popup.current.style.position = position === 'fixed' ? 'fixed' : 'absolute'
+    if (directionX === 'right') {
+      positionX = position === 'fixed' ? relativeElement.current.getBoundingClientRect().right : 0
+      popup.current.style.right = `${positionX}px`
+    } else {
+      positionX = position === 'fixed' ? relativeElement.current.getBoundingClientRect().left : 0
+      popup.current.style.left = `${positionX}px`
+    }
+    if (directionY === 'bottom') {
+      positionY = relativeElement.current.getBoundingClientRect().top + 2 * relativeElement.current.offsetHeight + 10
+      popup.current.style.bottom = `${positionY}px`
+    } else {
+      positionY = relativeElement.current.getBoundingClientRect().top - 2 * relativeElement.current.offsetHeight - 10
+      popup.current.style.top = `${positionY}px`
+    }
   }
   useEffect(() => {
     popupPosition()
     window.addEventListener('resize', popupPosition)
-    return () => window.removeEventListener('resize', popupPosition)
-  }, [popupPosition])
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => {
+      window.removeEventListener('resize', popupPosition)
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [popupPosition, relativeElement])
   return (
-        <div className='relative'>
-            <div className='popup' ref={popup}>
-                <div className='popup__content'>
-                    {children}
-                </div>
+
+        <div className='popup' ref={popup}>
+            <div className='popup__content'>
+                {children}
             </div>
         </div>
-
   )
 }
 
 Popup.propTypes = {
   children: PropTypes.any,
-  relativeElementClass: PropTypes.string
+  relativeElement: PropTypes.object,
+  directionX: PropTypes.string,
+  directionY: PropTypes.string,
+  position: PropTypes.string,
+  onClose: PropTypes.func
 }
 
 export default Popup

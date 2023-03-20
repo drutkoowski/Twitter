@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react'
+import { useContext, useRef, useState } from 'react'
 import UserContext from '@/context/UserContext.jsx'
 
 import '@/styles/sidebar/index.scss'
@@ -10,6 +10,7 @@ import Popup from '../popups/Popup.jsx'
 function Sidebar () {
   const { user, setUser, isAuthenticated, setIsAuthenticated } = useContext(UserContext)
   const [showProfilePopup, setShowProfilePopup] = useState(false)
+  const profileInfoRef = useRef(null)
   console.log(isAuthenticated)
   return (
 
@@ -41,13 +42,17 @@ function Sidebar () {
                                          redirectPath='/okuratny_rutek'/>
                             <SidebarLink text='More' imgPath='/options-gray.svg' altText='More'/>
                             <Button text='Tweet' classNames='primary py-3'/>
-                            <SidebarProfileInfo showProfilePopup={() => setShowProfilePopup(!showProfilePopup)}/>
+                            <div ref={profileInfoRef} className='sidebar__container__element--profile relative'>
+                                <SidebarProfileInfo showProfilePopup={() => setShowProfilePopup(!showProfilePopup)}
+                                />
+                            </div>
                         </>
                     }
                 </div>
             </div>
             {showProfilePopup &&
-                <Popup relativeElementClass='sidebar__element--profile'>
+                <Popup relativeElement={profileInfoRef} directionY='top' directionX='left' position='fixed'
+                       onClose={() => setShowProfilePopup(!showProfilePopup)}>
                     <div className='popup__content__element'>
                         <h4>Add existing account</h4>
                     </div>

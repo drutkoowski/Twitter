@@ -1,7 +1,11 @@
-.sidebar__element--profile {
-  display: flex;
+.sidebar__container__element--profile {
   margin-top: auto;
   margin-bottom: 1.5rem;
+  height: 50px;
+}
+
+.sidebar__element--profile {
+  display: flex;
   column-gap: 0.5rem;
   height: 50px;
   width: 14rem;

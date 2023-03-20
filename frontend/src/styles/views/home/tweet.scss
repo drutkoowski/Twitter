@@ -39,10 +39,29 @@
         font-weight: 500;
       }
 
-      svg {
+      &__svg-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin-left: auto;
-        height: 18.75px;
-        width: 18.75px;
+        height: 34.75px;
+        width: 34.75px;
+        cursor: pointer;
+        border-radius: 50%;
+        transition: all .3s ease-out;
+
+        &:hover {
+          background-color: var(--primary-hover);
+
+          svg {
+            fill: var(--primary-blue);
+          }
+        }
+
+        svg {
+          height: 18.75px;
+          width: 18.75px;
+        }
       }
     }
 
@@ -50,29 +69,73 @@
       display: flex;
       justify-content: space-between;
       margin-right: 2rem;
-      margin-top: 0.75rem;
+      margin-top: 0.5rem;
 
       &__counter {
         display: flex;
         align-items: center;
+        justify-content: center;
         column-gap: 0.45rem;
         color: var(--gray);
         cursor: pointer;
+
+        &--primary:hover {
+          div {
+            background-color: var(--primary-hover);
+
+            svg {
+              fill: var(--primary-blue);
+            }
+          }
+
+          p {
+            color: var(--primary-blue)
+          }
+        }
+
+        &--red:hover {
+          div {
+            background-color: var(--red-hover);
+
+            svg {
+              fill: var(--red);
+            }
+          }
+
+          p {
+            color: var(--red)
+          }
+        }
+
+        &--green:hover {
+          div {
+            background-color: var(--green-hover);
+
+            svg {
+              fill: var(--green);
+            }
+          }
+
+          p {
+            color: var(--green)
+          }
+        }
 
         p {
           font-size: 0.75rem;
         }
 
-        svg {
-          width: 18.75px;
-          height: 18.75px;
-        }
-
-        &:hover {
-          color: var(--primary-blue);
+        &__svg-container {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 34.5px;
+          width: 34.5px;
+          border-radius: 20px;
 
           svg {
-            fill: var(--primary-blue);
+            width: 18.75px;
+            height: 18.75px;
           }
         }
       }
