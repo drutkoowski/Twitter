@@ -8,7 +8,7 @@ function JoinTwitter () {
 
   return (
         <>
-            {!isAuthenticated && <div className='join-twitter'>
+            {!isAuthenticated && <div className='join-twitter relative'>
                 <div className='join-twitter__info'>
                     <h4>Don’t miss what’s happening</h4>
                     <p>People on Twitter are the first to know.</p>
@@ -19,7 +19,6 @@ function JoinTwitter () {
                 </div>
             </div>}
         </>
-
   )
 }
 

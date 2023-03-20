@@ -18,21 +18,18 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 
             <MainProvider>
                 <UserProvider>
-
-                    <div className='flex-container'>
-                        <Sidebar/>
-                        <App/>
-
+                    <div className='relative'>
+                        <div className='flex-container'>
+                            <Sidebar/>
+                            <App/>
+                        </div>
                         <div className='policy'>
                             <JoinTwitter/>
                             <Cookies/>
                         </div>
-
                     </div>
-
                 </UserProvider>
             </MainProvider>
-
         </AxiosInterceptor>
     </BrowserRouter>
 )

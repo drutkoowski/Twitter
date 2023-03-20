@@ -10,7 +10,7 @@ function Cookies () {
   return (
         <>
             {!cookiesAccepted && !isAuthenticated && <>
-                <div className='cookies'>
+                <div className='cookies relative'>
                     <div className='cookies__policy'>
                         <h3>Did someone say … cookies?</h3>
                         <p>Twitter and its partners use cookies to provide you with a better, safer and faster service

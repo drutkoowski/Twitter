@@ -3,17 +3,18 @@
   grid-template-columns: 0.75fr 1.6fr;
   min-height: 100vh;
   position: relative;
-
-  .policy {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
 }
 
 .wrapper {
   grid-column: 2/3;
   display: grid;
   grid-template-columns: 0.75fr 0.85fr;
+}
+
+.policy {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 11121;
 }
