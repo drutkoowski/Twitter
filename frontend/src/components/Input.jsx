@@ -4,6 +4,7 @@ import { useState } from 'react'
 
 function Input ({ placeholder, type, children, counter }) {
   const [inputLength, setInputLength] = useState(0)
+  const [showCounter, setShowCounter] = useState(false)
   return (
 
         <div className='input__container'>
@@ -15,9 +16,11 @@ function Input ({ placeholder, type, children, counter }) {
             {type !== 'select' &&
                 <div className="input__container__wrapper">
                     <input type={type} className='input' required
+                           onFocus={() => setShowCounter(true)}
+                           onBlur={() => setShowCounter(false)}
                            onChange={(e) => setInputLength(e.target.value.length)}/>
                     <span className="input__container__wrapper__floating-label">{placeholder}</span>
-                    {counter && <span className='input__container__wrapper__counter'>
+                    {counter && showCounter && <span className='input__container__wrapper__counter'>
                 {inputLength} / 50</span>}
                 </div>
             }
