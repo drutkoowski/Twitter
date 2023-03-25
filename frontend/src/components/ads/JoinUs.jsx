@@ -31,7 +31,7 @@ function JoinUs () {
                         <div className='modal__content__container__content'>
                             <h4>Create your account</h4>
                             <div className='modal__content__container__content__form'>
-                                <Input placeholder='Name' type='text'/>
+                                <Input placeholder='Name' type='text' counter/>
                                 <Input placeholder='Email' type='email'/>
                                 <div className='modal__content__container__content__info'>
                                     <p>Date of birth</p>

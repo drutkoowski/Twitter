@@ -5,7 +5,7 @@ const UserContext = React.createContext()
 
 export const UserProvider = ({ children }) => {
   const [user, setUser] = useState({})
-  const [isAuthenticated, setIsAuthenticated] = useState(true)
+  const [isAuthenticated, setIsAuthenticated] = useState(false)
   return (
         <UserContext.Provider value={{ user, setUser, isAuthenticated, setIsAuthenticated }}>
             {children}

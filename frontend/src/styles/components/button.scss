@@ -23,6 +23,10 @@ button.primary-outlined {
 button.white {
   background-color: var(--blanked-white);
   color: var(--dark-gray);
+
+  &:hover {
+    background-color: var(--extra-light-gray);
+  }
 }
 
 button.lg {
